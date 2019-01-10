@@ -45,26 +45,14 @@ void	calc_step_and_init_side_dist(t_wolf *wolf)
 	}
 }
 
-void	dda_algorithm(t_wolf *wolf)
+void	calc_draw_limits(t_wolf *wolf)
 {
-	wolf->intersect = 0;
-	while (wolf->intersect == 0)
-	{
-		if (wolf->side_dist.x < wolf->side_dist.y)
-		{
-			wolf->side_dist.x += wolf->delta_dist.x;
-			wolf->map.x += wolf->step.x;
-			wolf->side = (wolf->ray_dir.x < 0) ? 0 : 2;
-		}
-		else
-		{
-			wolf->side_dist.y += wolf->delta_dist.y;
-			wolf->map.y += wolf->step.y;
-			wolf->side = (wolf->ray_dir.y < 0) ? 1 : 3;
-		}
-		if (wolf->map.data[wolf->map.x][wolf->map.y] > 0)
-			wolf->intersect = 1;
-	}
+	wolf->draw_start = -wolf->wall_height / 2 + WIN_H / 2;
+	if (wolf->draw_start < 0)
+		wolf->draw_start = 0;
+	wolf->draw_end = wolf->wall_height / 2 + WIN_H / 2;
+	if (wolf->draw_end >= WIN_H)
+		wolf->draw_end = WIN_H;
 }
 
 void	calc_wall_hit(t_wolf *wolf)

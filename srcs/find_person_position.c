@@ -18,23 +18,23 @@ void	find_person_position(t_wolf *wolf)
 	int		x;
 	int		flag;
 
-	y = 0;
+	y = wolf->map.rows - 1;
 	flag = 0;
-	while (y < wolf->map.rows)
+	while (y > 0)
 	{
-		x = 0;
-		while (x < wolf->map.col)
+		x = wolf->map.col - 1;
+		while (x > 0)
 		{
 			if (wolf->map.data[y][x] == 0 && flag == 0)
 			{
-				wolf->start.x = x + 0.5;
-				wolf->start.y = y + 0.5;
+				wolf->start.y = x + 0.5;
+				wolf->start.x = y + 0.5;
 				flag = 1;
 				return ;
 			}
-			x++;
+			x--;
 		}
-		y++;
+		y--;
 	}
 	if (flag == 0)
 		error("No place for the personage found");

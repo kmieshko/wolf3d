@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char *rm_symb(char *str, char c)
+char	*rm_symb(char *str, char c)
 {
 	char	*new_str;
 	int		i;

@@ -14,14 +14,14 @@
 
 static int	count_col(char *line)
 {
-	int	col;
-	int	i;
+	int		col;
+	int		i;
 
 	col = 0;
 	i = 0;
 	while (line[i] != '\0')
 	{
-		if (line[i] >= '0' && line[i] <= '9')
+		if (line[i] >= '0' && line[i] <= '6')
 		{
 			while (line[i + 1] != ' ' && line[i + 1])
 				i++;
@@ -62,7 +62,7 @@ static void	count_col_and_rows(char *filename, t_map *map)
 	fd = open(filename, O_RDONLY);
 	if (fd < 0 || read(fd, NULL, 0) < 0)
 		error(strerror(errno));
-	if (get_next_line_fast(fd, &line) == -1)
+	if (get_next_line_fast(fd, &line) <= 0)
 		error("Wrong map");
 	map->col = count_col(line);
 	map->rows = 1 + count_rows(fd, line, map);
@@ -94,7 +94,7 @@ static void	fill_data_map(int j, int i, char *filename, t_map *map)
 		i = 0;
 		while (tmp[i] != NULL)
 		{
-			map->data[j][i] = ft_atoi_base(tmp[i], 10);
+			map->data[j][i] = ft_atoi(tmp[i]) > NB_TEXT ? 1 : ft_atoi(tmp[i]);
 			free(tmp[i]);
 			i++;
 		}

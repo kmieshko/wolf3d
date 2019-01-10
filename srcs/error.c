@@ -17,5 +17,6 @@ void	error(char *str)
 	ft_putstr("Error: ");
 	ft_putstr(str);
 	ft_putendl("!");
+	system("leaks wolf3d");
 	exit(0);
 }

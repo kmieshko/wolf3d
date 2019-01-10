@@ -62,17 +62,6 @@ static void	left_right(t_wolf *w, int direction, double old_dir_x,
 {
 	if (direction < 0)
 	{
-		w->dir.x = w->dir.x * cos(-w->rot_speed) -
-			w->dir.y * sin(-w->rot_speed);
-		w->dir.y = old_dir_x * sin(-w->rot_speed) +
-			w->dir.y * cos(-w->rot_speed);
-		w->plane.x = w->plane.x * cos(-w->rot_speed) -
-			w->plane.y * sin(-w->rot_speed);
-		w->plane.y = old_pl_x * sin(-w->rot_speed) +
-			w->plane.y * cos(-w->rot_speed);
-	}
-	else
-	{
 		w->dir.x = w->dir.x * cos(w->rot_speed) -
 			w->dir.y * sin(w->rot_speed);
 		w->dir.y = old_dir_x * sin(w->rot_speed) +
@@ -81,6 +70,17 @@ static void	left_right(t_wolf *w, int direction, double old_dir_x,
 			w->plane.y * sin(w->rot_speed);
 		w->plane.y = old_pl_x * sin(w->rot_speed) +
 			w->plane.y * cos(w->rot_speed);
+	}
+	else
+	{
+		w->dir.x = w->dir.x * cos(-w->rot_speed) -
+			w->dir.y * sin(-w->rot_speed);
+		w->dir.y = old_dir_x * sin(-w->rot_speed) +
+			w->dir.y * cos(-w->rot_speed);
+		w->plane.x = w->plane.x * cos(-w->rot_speed) -
+			w->plane.y * sin(-w->rot_speed);
+		w->plane.y = old_pl_x * sin(-w->rot_speed) +
+			w->plane.y * cos(-w->rot_speed);
 	}
 }
 

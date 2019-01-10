@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char *replace_match(char *str, char c)
+char	*replace_match(char *str, char c)
 {
 	char	*new_str;
 	size_t	i;
@@ -23,7 +23,6 @@ char *replace_match(char *str, char c)
 	new_str = ft_strnew(ft_strlen(str));
 	while (str[i] != '\0')
 	{
-
 		if ((str[i] == c && str[i + 1] && str[i + 1] != c) || str[i] != c)
 		{
 			new_str[j] = str[i];

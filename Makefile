@@ -28,7 +28,9 @@ SRCS = $(PATH_SRCS)/main.c \
 		$(PATH_SRCS)/wall_color.c \
 		$(PATH_SRCS)/get_music.c \
 		$(PATH_SRCS)/draw.c \
-		$(PATH_SRCS)/ceiling_floor.c
+		$(PATH_SRCS)/ceiling_floor.c \
+		$(PATH_SRCS)/free.c \
+		$(PATH_SRCS)/loops.c
 
 OBJ = $(SRCS:.c=.o)
 

@@ -56,11 +56,11 @@ void	fill_buf_ceiling_floor(t_wolf *wolf, int buffer[WIN_H][WIN_W], int x)
 		floor_text.y = (int)(cur_floor.y * TEXT_H) % TEXT_H;
 		wolf->inten = wolf->weapon > 0 ?
 			ft_clamp_with_param((0.5 * y) / (WIN_H - y), 0.1, 1) : 1;
-		wolf->color = (wolf->textures.a[TEXT_H * floor_text.y +
-			floor_text.x] >> 1) & 8355711;
+		wolf->color = (wolf->textures.a[TEXT_H * floor_text.x +
+			floor_text.y] >> 1) & 8355711;
 		buffer[y - 1][x] = get_color(wolf->color, wolf->inten);
-		wolf->color = (wolf->textures.c[TEXT_H * floor_text.y +
-			floor_text.x] >> 1) & 8355711;
+		wolf->color = (wolf->textures.c[TEXT_H * floor_text.x +
+			floor_text.y] >> 1) & 8355711;
 		buffer[WIN_H - y][x] = get_color(wolf->color, wolf->inten);
 	}
 }

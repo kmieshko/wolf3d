@@ -31,6 +31,7 @@ static int	ft_get_sign(const char *str)
 {
 	int		sign;
 	int		i;
+
 	i = 0;
 	sign = 1;
 	while (str[i] == '\n' || str[i] == '\t' || str[i] == '\r' \

@@ -31,6 +31,6 @@ void	init_structure_wolf(t_wolf *wolf)
 	wolf->switcher = 1;
 	wolf->weapon = -1;
 	wolf->inten = 1;
-	wolf->dir.x = 1;
+	wolf->dir.x = -1;
 	wolf->dir.y = 0;
 }
