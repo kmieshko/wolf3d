@@ -6,7 +6,7 @@
 /*   By: kmieshko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/17 18:23:09 by kmieshko          #+#    #+#             */
-/*   Updated: 2018/12/17 18:23:10 by kmieshko         ###   ########.fr       */
+/*   Updated: 2019/01/10 14:19:52 by kmieshko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,5 @@ void	error(char *str)
 	ft_putstr("Error: ");
 	ft_putstr(str);
 	ft_putendl("!");
-	system("leaks wolf3d");
 	exit(0);
 }
