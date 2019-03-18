@@ -12,4 +12,25 @@ It's a very simple format. Open a file in your favorite text editor, make sure y
 1 0 0 0 1
 1 1 1 1 1
 ```
-Numbers `1-6` is a kind of textures view
+Numbers `1-6` is a kind of textures
+
+**Bonuses**
+
+1. Music in game
+2. Button `S` on keyboard switching the textures set.
+3. Button `W` - on/off weapon
+4. Texturing floor and ceiling
+5. 
+
+# Usage
+
+```
+git clone https://github.com/kmieshko/wolf3d.git
+cd wolf3d
+make
+./wolf3d [map]
+```
+
+*Notice*: Project using SDL2 graphic library and it's needed to run this project
+
+# Some examples
