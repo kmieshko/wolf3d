@@ -18,9 +18,9 @@ Numbers `1-6` is a kind of textures
 
 1. Music in game
 2. Button `S` on keyboard switching the textures set.
-3. Button `W` - on/off weapon
+3. Button `W` on keyboard - on/off weapon
 4. Texturing floor and ceiling
-5. 
+5. Button `L` on keyboard run system command leaks and show memory leaks in program.
 
 # Usage
 
