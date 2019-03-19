@@ -34,3 +34,9 @@ make
 *Notice*: Project using SDL2 graphic library and it's needed to run this project
 
 # Some examples
+
+<p align="center">
+<img src="https://github.com/kmieshko/wolf3d/blob/master/examples/1.png" width=600>
+<img src="https://github.com/kmieshko/wolf3d/blob/master/examples/2.png" width=600>
+<img src="https://github.com/kmieshko/wolf3d/blob/master/examples/3.png" width=600>
+</p>
